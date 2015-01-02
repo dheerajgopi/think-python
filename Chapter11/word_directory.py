@@ -9,4 +9,14 @@ def word_directory():
 		word=line.strip()
 		i+=1
 		word_dir[word]=i
-	print word_dir
+	return word_dir
+
+def search(word):
+
+	dictionary=word_directory()
+	if word in dictionary:
+		return dictionary[word]
+	else:
+		return False
+
+print(search('humble'))
