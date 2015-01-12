@@ -1,5 +1,5 @@
 # defining the ackerman function where 'm' and 'n' are positive integers
-
+import timeit
 def ack(m,n):
 
     # checking if parameters are integers
@@ -22,3 +22,5 @@ def ack(m,n):
     elif m>0 and n>0:
         answer = ack(m-1,(ack(m,n-1)))
         return answer
+
+print(timeit.timeit("ack(2,3)","from __main__ import ack",number=3))
