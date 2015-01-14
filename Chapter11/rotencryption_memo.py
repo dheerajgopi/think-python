@@ -1,4 +1,3 @@
-# code for encrypting a word by rotating each letter by n times
 
 
 def rotn(word,n):
@@ -7,9 +6,7 @@ def rotn(word,n):
     for letter in word:
         
         rotword = rotword + rotl(letter,n) # adding each letter to form final word
-
-    print rotword       # printing final rotated word
-
+	return rotword
 
 #function for converting a letter to its rotated letter
 def rotl(l,n):
@@ -32,4 +29,16 @@ def rotl(l,n):
 
     return chr(rotletter)   # returning the rotated character
 
-print(rotn('melon',13))
+
+fin=open("/home/dheeraj/repos/think-python/words.txt")
+wrdict={}
+for line in fin:
+	word=line.strip()
+	wrdict[word]=word
+
+for i in range (1,14):
+	rword=rotn('cheer',i)
+
+if rword in wrdict:
+	print rword
+
