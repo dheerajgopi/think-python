@@ -37,17 +37,8 @@ def binary(word):
 	return -1
 
 # Creating list of reverse pairs 
-pairlist = [sorted((x,x[::-1])) for x in wordlist if binary(x[::-1]) != -1]
+pairlist = [tuple(sorted((x,x[::-1]))) for x in wordlist if binary(x[::-1]) != -1]
 
-# for storing final list
-revpairlist = []
-
-# For removing duplicates
-for x in pairlist:
-
-	if x not in revpairlist:
-
-		revpairlist.append(x)
-
-print revpairlist
-print len(revpairlist)
+# Removing duplicates
+print set(pairlist)
+print len(set(pairlist))
