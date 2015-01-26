@@ -1,12 +1,2 @@
-abc
-ac
-cba
-maps
-sprite
-spite
-spit
-spam
-pit
-it
-i
-
+*** hello...   
+the quick brown fox jumps over the lazy dog.!!!!   
